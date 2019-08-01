@@ -1,10 +1,17 @@
 package Strategy_Pattern;
 
 public abstract class Duck {
+	FlyBehaviour fb;
+	QuackBehaviour qb;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("aathi--1");
+	public void performfly() {
+		fb.fly();
 	}
-
+	public void performquack() {
+		qb.quack();
+	}
+	abstract void display();
+	public void swim () {
+		System.out.println("can swim");
+	}
 }
